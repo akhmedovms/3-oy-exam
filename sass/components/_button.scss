@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .site-btn {
   color: $white-color;
   font-family: $main-font-family;
@@ -6,7 +13,8 @@
   line-height: 2.6rem;
   letter-spacing: 2.286px;
   border-bottom: 3px solid $green-color;
-  padding-bottom: 1rem;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -15,8 +23,26 @@
 }
 
 .hero__btn-wr {
+  a {
+  }
   @media screen and (max-width: 375px) {
     text-align: center;
   }
-  // padding-bottom: 21.9rem;
+}
+
+.footer-btn {
+  color: $white-color;
+  font-family: $main-font-family;
+  font-size: 1.6rem;
+  font-weight: $description-weight;
+  line-height: 2.6rem;
+  letter-spacing: 2.286px;
+  border-bottom: 3px solid $green-color;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer-btn:hover {
+  color: $green-color;
 }

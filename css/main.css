@@ -153,7 +153,8 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -162,7 +163,8 @@ input { /* 1 */
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -308,6 +310,12 @@ template {
   display: none;
 }
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 *,
 *::after,
 *::before {
@@ -324,7 +332,7 @@ html {
 
 img {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 a {
@@ -351,6 +359,7 @@ body {
   flex-direction: column;
   height: 100%;
   background-color: #151515;
+  font-family: "Space Grotesk";
   color: #ffffff;
 }
 
@@ -379,6 +388,12 @@ body {
   font-weight: 700;
   src: url("../fonts/space-grotesk-v15-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 .header {
   padding-top: 3.9rem;
   position: relative;
@@ -442,6 +457,103 @@ body {
     padding-bottom: 4.9rem;
   }
 }
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+.footer {
+  background-color: #242424;
+  padding-top: 3.4rem;
+}
+
+.login-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login__text-content-wr {
+  padding-top: 3rem;
+}
+.login__text-content-wr h1 {
+  color: #ffffff;
+  font-family: "Space Grotesk";
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 88px;
+  letter-spacing: -2.5px;
+  padding-bottom: 3.2rem;
+}
+.login__text-content-wr .login-desc-wr p {
+  color: #ffffff;
+  font-family: "Space Grotesk";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+input {
+  background-color: #242424;
+  border: none;
+  border-bottom: 2px solid gray;
+  font-size: 1.6rem;
+  font-family: "Space Grotesk";
+  font-weight: 500;
+  line-height: 2.6rem;
+  letter-spacing: -0.222px;
+  padding: 3.2rem 10rem 1.7rem 2.4rem;
+}
+
+#end-login {
+  padding-bottom: 6.4rem;
+}
+
+.footer-btn {
+  background: none;
+  margin-top: 3.2rem;
+  border: none;
+  padding-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+}
+
+.footer-hr {
+  padding-top: 9.2rem;
+  padding-bottom: 4.7rem;
+}
+
+.footer__navigation {
+  padding-bottom: 9.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .login-section {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 375px) {
+  .login-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer {
+    margin: 0;
+  }
+  .footer__navigation {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 main {
   flex-grow: 1;
 }
@@ -475,12 +587,13 @@ main {
 }
 .hero__text-content .hero__desc {
   padding-top: 4.3rem;
+}
+.hero__text-content .hero__desc p {
   color: #ffffff;
   font-family: "Space Grotesk";
   font-size: 18px;
   font-weight: 500;
   line-height: 28px;
-  width: 445px;
 }
 
 span {
@@ -500,16 +613,14 @@ span::after {
   background-color: #4ee1a0;
 }
 
-.site-btn {
+.hero-btn {
   padding-top: 6.6rem;
 }
 
 .hero-image-wrapper {
-  background-image: url(../../images/hero-circle-img.svg);
-  background-repeat: no-repeat;
   position: absolute;
-  margin-left: 680px;
-  padding-top: 25rem;
+  right: 14%;
+  padding-top: 6rem;
   background-color: #242424;
 }
 .hero-image-wrapper img {
@@ -522,6 +633,162 @@ span::after {
 
 .hero-hr {
   margin-top: 23rem;
+}
+
+.languages {
+  padding-top: 7.2rem;
+}
+
+.language__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 44px;
+  grid-row-gap: 35px;
+}
+
+.language__container > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.language__container > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.language__container > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+
+.language__container > *:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.language__container > *:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+
+.language__container > *:nth-child(6) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+}
+
+.language__container > *:nth-child(7) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+}
+
+.language__container > *:nth-child(8) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+}
+
+.language__container > *:nth-child(9) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 5;
+}
+
+.skill h2 {
+  color: #ffffff;
+  font-family: "Space Grotesk";
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: -1.5px;
+}
+.skill p {
+  color: #ffffff;
+  font-family: "Space Grotesk";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.project {
+  padding-bottom: 13.9rem;
+}
+
+.project__title-wr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8rem;
+}
+.project__title-wr h1 {
+  color: #ffffff;
+  font-family: "Space Grotesk";
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 88px;
+  letter-spacing: -2.5px;
+}
+
+.projects-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 2.3rem;
+  grid-row-gap: 4rem;
+}
+
+.projects-wrapper > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.projects-wrapper > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.projects-wrapper > *:nth-child(3) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.projects-wrapper > *:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+
+.projects-wrapper > *:nth-child(5) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+}
+
+.projects-wrapper > *:nth-child(6) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+}
+
+.figma__project h3 {
+  color: #ffffff;
+  font-family: "Space Grotesk";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  padding-top: 2rem;
+  padding-bottom: 0.7rem;
+}
+.figma__project p {
+  color: #ffffff;
+  font-family: "Space Grotesk";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
+.figma__project .project-btn-wr {
+  display: flex;
+  padding-top: 2rem;
+  gap: 3.2rem;
+}
+
+.projec {
+  display: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -539,9 +806,6 @@ span::after {
   .hero__text-content {
     padding-top: 9rem;
   }
-  .hero__title-wr {
-    width: 443px;
-  }
   .hero__title-wr .hero__hidden-title {
     font-family: "Space Grotesk";
     font-size: 7.2rem;
@@ -555,17 +819,65 @@ span::after {
   }
   .hero-image-wrapper {
     position: absolute;
-    margin-top: -18rem;
-    margin-left: 41.8rem;
+    margin-top: -15rem;
+    padding-top: 15rem;
+    right: 0;
     background-color: #242424;
   }
   .hero-image-wrapper img {
     z-index: -1;
-    width: 30rem;
-    height: 44rem;
+    width: 35rem;
+    height: 49rem;
   }
   .site-btn {
     padding-top: 3.4rem;
+  }
+  .language__container {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(3, 2fr);
+    grid-column-gap: 44px;
+    grid-row-gap: 35px;
+  }
+  .language__container > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .language__container > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .language__container > *:nth-child(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .language__container > *:nth-child(4) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .language__container > *:nth-child(5) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .language__container > *:nth-child(6) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .project {
+    padding-top: 10rem;
+  }
+  .project__container {
+    display: grid;
+    justify-content: center;
+  }
+  .project__title-wr h1 {
+    font-size: 7.2rem;
+    font-weight: 700;
+    line-height: 7.2rem;
+    letter-spacing: -2.045px;
+  }
+  .figma__project img {
+    width: 345px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -608,13 +920,14 @@ span::after {
     background-color: #4ee1a0;
   }
   .hero__desc {
+    width: 370px;
+  }
+  .hero__desc p {
     text-align: center;
     font-family: "Space Grotesk";
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 2.6rem;
-    padding: 0;
-    margin: 0;
     margin-top: -2rem;
   }
   .hero__visible-title {
@@ -623,12 +936,91 @@ span::after {
   .hero__hidden-title {
     display: none;
   }
-  .hero__mobile-image-wrapper img {
-    z-index: -1;
-    width: 17rem;
-    height: 24rem;
+  .language__container {
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: px;
+    grid-row-gap: 25px;
+    text-align: center;
+  }
+  .language__container > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .language__container > *:nth-child(2) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .language__container > *:nth-child(3) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .language__container > *:nth-child(4) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .language__container > *:nth-child(5) {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+  .language__container > *:nth-child(6) {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+  }
+  .project__title-wr h1 {
+    color: #ffffff;
+    font-family: "Space Grotesk";
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: -1.5px;
+  }
+  .projects-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+  }
+  .projects-wrapper > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .projects-wrapper > *:nth-child(2) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .projects-wrapper > *:nth-child(3) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .projects-wrapper > *:nth-child(4) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .projects-wrapper > *:nth-child(5) {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+  .projects-wrapper > *:nth-child(6) {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+  }
+  .figma__project .project-btn-wr {
+    margin-top: -2rem;
+  }
+  .projec {
+    display: block;
+    padding-top: 4rem;
   }
 }
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 .site-btn {
   color: #ffffff;
   font-family: "Space Grotesk";
@@ -637,7 +1029,6 @@ span::after {
   line-height: 2.6rem;
   letter-spacing: 2.286px;
   border-bottom: 3px solid #4ee1a0;
-  padding-bottom: 1rem;
   transition: 0.3s;
 }
 
@@ -649,4 +1040,19 @@ span::after {
   .hero__btn-wr {
     text-align: center;
   }
+}
+
+.footer-btn {
+  color: #ffffff;
+  font-family: "Space Grotesk";
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.6rem;
+  letter-spacing: 2.286px;
+  border-bottom: 3px solid #4ee1a0;
+  transition: 0.3s;
+}
+
+.footer-btn:hover {
+  color: #4ee1a0;
 }/*# sourceMappingURL=main.css.map */
